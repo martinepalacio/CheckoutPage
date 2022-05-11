@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16 px;
+}
+body h1 {
+  color: #4e5150;
+  margin: 32px 3vw 0;
+  font-size: 1.5em;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0 4vw;
+  background-color: #f2f2f2;
+  height: max-content;
+  padding: 10px;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  align-items: flex-start;
+}
+.items img {
+  width: 125px;
+  height: 122px;
+  border-radius: 13px;
+}
+.itemDescripcion {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 15px;
+}
+.itemName {
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75em;
+  color: #4e5150;
+}
+.itemPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  line-height: 0;
+}
+.itemPriceTag {
+  margin-right: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.85em;
+  color: #f2994a;
+}
+.itemPriceOffer {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.625em;
+  line-height: 8px;
+  text-decoration-line: line-through;
+}
+.countItem {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 122.8px;
+  height: 49.86px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+}
+.countItem button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border: none;
+  color: #828282;
+  font-size: 1.8em;
+  border-radius: 4px;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+.resumen {
+  margin-top: 87px;
+}
+.resumen hr {
+  margin: 0 10px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  line-height: 10px;
+  color: #333333;
+}
+.datos {
+  margin: 40px 0.75em 120px;
+  display: flex;
+  flex-direction: column;
+}
+.dir {
+  margin-top: 45px;
+}
+.datosTitulo h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 17px;
+
+  color: #333333;
+}
+.subtitulo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.625em;
+  line-height: 12px;
+
+  /* Gray 2 */
+
+  color: #4f4f4f;
+}
+.input {
+  height: 40px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.inputForm {
+  width: 85%;
+  border: none;
+  padding: 5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 15px;
+
+  /* Gray 3 */
+
+  color: #333333;
+}
+.inputForm::placeholder {
+  color: #828282;
+}
+.iconForm {
+  margin: 0 10px;
+  color: #828282;
+}
+.selectForm {
+  width: 80%;
+  border: none;
+  background: none;
+  padding: 5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 15px;
+  color: #828282;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.country {
+  width: 50%;
+  margin-right: 23px;
+}
+.postalCode {
+  width: 50%;
+}
+.inputFormPais {
+  height: 40px;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.checkbox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+
+  /* Gray 2 */
+
+  color: #4f4f4f;
+}
+.continuarSubmit {
+  margin-left: auto;
+  width: 166px;
+  height: 54px;
+
+  /* Orange */
+
+  background: #f2994a;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.continuarSubmit button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 20px;
+}
+@media screen and (min-width: 600px) {
+  main {
+    flex-direction: row-reverse;
+    justify-content: center;
+    font-size: 17px;
+  }
+  .datos {
+    margin-top: 0;
+    width: 320px;
+  }
+  .info {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .main {
+    font-size: 18px;
+  }
+  .datos {
+    width: 400px;
+  }
+  .info {
+    width: max-content;
+  }
+}

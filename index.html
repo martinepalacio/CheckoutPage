@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Página de pagos</title>
+    <script type="text/javascript" src="script/countries.js"></script>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <main class="main">
+      <div class="info">
+        <div class="items">
+          <img src="img/mochila.png" />
+          <div class="itemDescripcion">
+            <b class="itemName">Vintage Backbag</b>
+            <div class="itemPrice">
+              <p class="itemPriceTag">$54,99</p>
+              <p class="itemPriceOffer">$94,99</p>
+            </div>
+            <div class="countItem">
+              <button id="btnMin1">-</button>
+              <span id="count1">0</span>
+              <button id="btnAdd1">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <img src="img/zapatillas.png" />
+          <div class="itemDescripcion">
+            <b class="itemName">Levi Shoes</b>
+            <div class="itemPrice">
+              <p class="itemPriceTag">$74,99</p>
+              <p class="itemPriceOffer">$124,99</p>
+            </div>
+            <div class="countItem">
+              <button id="btnMin2">-</button>
+              <span id="count2">0</span>
+              <button id="btnAdd2">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="resumen">
+          <hr />
+          <div class="price">
+            <p>Envío</p>
+            <p>$19.00</p>
+          </div>
+          <hr />
+          <div class="price">
+            <p>Total</p>
+            <p id="totalPrice">$0.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="datos">
+        <form>
+          <div class="datosTitulo">
+            <h3>Información de contacto</h3>
+            <div class="inputStyle1 email">
+              <b class="subtitulo">E-mail</b>
+              <div class="input">
+                <span class="iconForm"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Ingrese su E-mail..."
+                  class="inputForm"
+                  required
+                />
+              </div>
+            </div>
+            <div class="inputStyle1 phone">
+              <b class="subtitulo">Teléfono</b>
+              <div class="input">
+                <span class="iconForm"><i class="fa-solid fa-phone"></i></span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Ingrese su teléfono..."
+                  class="inputForm"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="datosTitulo dir">
+            <h3>Dirección de envío</h3>
+            <div class="inputStyle1 name">
+              <b class="subtitulo">Nombre Completo</b>
+              <div class="input">
+                <span class="iconForm"
+                  ><i class="fa-solid fa-circle-user"></i
+                ></span>
+                <input
+                  type="name"
+                  name="name"
+                  placeholder="Ingrese su nombre y apellido..."
+                  class="inputForm"
+                  required
+                />
+              </div>
+            </div>
+            <div class="inputStyle1 adress">
+              <b class="subtitulo">Dirección</b>
+              <div class="input">
+                <span class="iconForm"><i class="fa-solid fa-house"></i></span>
+                <input
+                  type="text"
+                  name="adress"
+                  placeholder="Ingrese su dirección..."
+                  class="inputForm"
+                  required
+                />
+              </div>
+            </div>
+            <div class="inputStyle1 city">
+              <b class="subtitulo">Ciudad</b>
+              <div class="input">
+                <span class="iconForm"><i class="fa-solid fa-city"></i></span>
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="Ingrese su cuidad..."
+                  class="inputForm"
+                />
+              </div>
+            </div>
+            <div class="inputStyle2 form">
+              <div class="country">
+                <b class="subtitulo">País</b>
+                <div class="inputFormPais">
+                  <span class="iconForm"
+                    ><i class="fa-solid fa-earth-americas"></i
+                  ></span>
+                  <select
+                    onchange="print_state('state',this.selectedIndex);"
+                    id="country"
+                    name="country"
+                    class="selectForm"
+                    required
+                  ></select>
+                </div>
+              </div>
+              <div class="postalCode">
+                <b class="subtitulo">Código postal</b>
+                <div class="input">
+                  <span class="iconForm"
+                    ><i class="fa-solid fa-map-location-dot"></i
+                  ></span>
+                  <input
+                    class="inputForm"
+                    type="text"
+                    name="postalCode"
+                    placeholder="Tu código postal"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <h6 class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox" />Guardar la
+            información para la próxima vez
+          </h6>
+          <div class="continuarSubmit">
+            <button
+              class="btn"
+              type="submit"
+              name="continuar"
+              id="continuar"
+              value="Continuar"
+            >
+              Continuar
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="script/script.js"></script>
+  <script language="javascript">
+    print_country("country");
+  </script>
+  <script
+    src="https://kit.fontawesome.com/362b19794e.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
